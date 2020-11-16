@@ -10,6 +10,7 @@ AllCops:
     - vendor/**/*
     - node_modules/**/*
     - bin/**/*
+    - config/**/*
   TargetRubyVersion: '2.7.2'
   NewCops: enable
 
