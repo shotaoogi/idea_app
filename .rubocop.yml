@@ -26,3 +26,6 @@ RSpec/ContextWording:
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
+
+RSpec/ExampleLength:
+  Max: 10
