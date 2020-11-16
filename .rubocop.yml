@@ -12,3 +12,6 @@ AllCops:
     - bin/**/*
   TargetRubyVersion: '2.7.2'
   NewCops: enable
+
+Style/Documentation:
+  Enabled: false
