@@ -3,6 +3,6 @@
 FactoryBot.define do
   factory :idea do
     body { Faker::Lorem.paragraph }
-    category
+    association :category
   end
 end
