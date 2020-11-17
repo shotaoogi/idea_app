@@ -16,10 +16,10 @@ RSpec.describe Api::V1::IdeasController, type: :request do
       aggregate_failures do
         get api_v1_ideas_path(category_name: category_name)
         expect(response).to have_http_status(:ok)
-        expect(response_json[:data][0][:id]).to eq(1234)
-        expect(response_json[:data][0][:category]).to eq('category_name')
-        expect(response_json[:data][0][:category]).to eq('body_1234')
-        expect(response_json[:data]).not_to include(5678)
+        expect(response_json[0][:id]).to eq(1234)
+        expect(response_json[0][:category]).to eq('category_name')
+        expect(response_json[0][:body]).to eq('body_1234')
+        expect(response_json).not_to include(5678)
       end
     end
 
@@ -28,11 +28,11 @@ RSpec.describe Api::V1::IdeasController, type: :request do
         aggregate_failures do
           get api_v1_ideas_path
           expect(response).to have_http_status(:ok)
-          expect(response_json[:data][0][:id]).to eq(1234)
-          expect(response_json[:data][0][:category]).to eq('category_name')
-          expect(response_json[:data][0][:category]).to eq('body_1234')
-          expect(response_json[:data][1][:id]).to eq(5678)
-          expect(response_json[:data][1][:body]).to eq('body_5678')
+          expect(response_json[0][:id]).to eq(1234)
+          expect(response_json[0][:category]).to eq('category_name')
+          expect(response_json[0][:body]).to eq('body_1234')
+          expect(response_json[1][:id]).to eq(5678)
+          expect(response_json[1][:body]).to eq('body_5678')
         end
       end
     end
