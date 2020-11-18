@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+簡易的な Rails API です。
 
-Things you may want to cover:
+### 開発環境
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby 2.7.2
+* Rails 6.0.3
+* DB：Mysql
+* その他：active_model_serializers, rspec, rubocop
